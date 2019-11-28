@@ -3,10 +3,17 @@ const wordMaker = require('./index')
 
 describe('wordMaker with hello', () => {
 
+  test('Hello test 0 ', () => {
+
+    const result = wordMaker('hello', ' helo')
+
+    expect(result).toEqual(0)
+  })
+
   test('Hello test 1', () => {
     const exptectedResult = 0
 
-    const result = wordMaker('hello', 'hheheleell')
+    const result = wordMaker('hola, como, estas, hola', 'hola')
 
     expect(result).toEqual(exptectedResult)
   }),
@@ -51,7 +58,7 @@ describe('wordMaker with world', () => {
   test('World test 3', () => {
     const exptectedResult = 3
 
-    const result = wordMaker('world', 'lwooolorrrdd l')
+    const result = wordMaker('world', 'lw   ww  oo olo rrr dd dl')
 
     expect(result).toEqual(exptectedResult)
   })
